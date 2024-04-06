@@ -1,7 +1,7 @@
 from langchain_community.document_loaders import TextLoader
 
 import os
-os.environ['OPENAI_API_KEY'] = "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"
+# os.environ['OPENAI_API_KEY'] = unluckeee
 
 loader = TextLoader("/Users/samriddhoghosh/Desktop/Early/doc.txt")
 documents = loader.load()
