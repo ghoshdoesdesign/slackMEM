@@ -12,7 +12,7 @@ from langchain.utilities import SerpAPIWrapper, SQLDatabase
 #from langchain_experimental.sql import SQLDatabaseChain
 
 import os
-os.environ['OPENAI_API_KEY'] = "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"
+os.environ['OPENAI_API_KEY'] = "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"
 os.environ['SERPAPI_API_KEY'] = "181c6aacc8075e235ee567884f58f298dc35033b6de749ab6537f4b7cd1655f2"
 np.random.seed(0)
 

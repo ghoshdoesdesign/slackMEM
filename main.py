@@ -3,14 +3,14 @@ import streamlit as st
 #                    page_icon=":bridge_at_night:",
 #                    layout="wide")
 
-#st.image("cover_image_01.jpg", width=1500)
+st.image("big_02.jpg")
 
 # with open( "app\style.css" ) as css:
 #     st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
 
 
 
-tab1, tab2, tab3 = st.tabs(["about", "startups", "chatterbox"])
+tab1, tab2, tab3 = st.tabs(["About", "Startups", "HustlerAI"])
 #st.image("cover_image_10.jpg")
 
 css = '''
@@ -24,10 +24,33 @@ css = '''
 st.markdown(css, unsafe_allow_html=True)
 
 with tab1:
-    st.image("cover_image_10.jpg")
+
+    st.image("about_pt1_05.jpg")
+    st.image("about_pt2_04.jpg")
+
+    col1, col2, col3 , col4, col5 = st.columns(5)
+
+    with col1:
+        pass
+    with col2:
+        pass
+    with col4:
+        pass
+    with col5:
+        pass
+    with col3 :
+        
+        center_button = st.link_button("Feedback!", "https://forms.gle/gqeDsSN4jYxLAwiV9")
+
+
+    st.image("disc_02.jpg")
+
+
+
+    #st.image("cover_image_10.jpg")
 
 with tab2:
-    st.image("cover_image_10.jpg")
+    #st.image("cover_image_10.jpg")
     st.write("**Name**: [Leap AI](https://www.tryleap.ai/)")
     st.write("**Funding**: 1.4M, Seed")
     st.write("**Industry**: Artificial Intelligence, B2B Software")
@@ -145,7 +168,7 @@ with tab2:
 
 
 
-    st.write("**Name**: [Forta](https://www.fortahealth.com)")
+    st.write("**Name**: [Forta Health](https://www.fortahealth.com)")
     st.write("**Funding**: 55M, Series A")
     st.write("**Industry**: Family, Healthcare, B2B Software")
     intro_text = """
@@ -360,6 +383,57 @@ with tab2:
 
 
 
+    st.write("*Name*: [Ambience Healthcare](https://www.ambiencehealthcare.com/)")
+    st.write("*Funding*: $7M")
+    st.write("*Industry*: Artificial Intelligence, Healthcare, B2B Software")
+
+    intro_text = """
+    Ambience Healthcare’s mission is to supercharge clinicians with breakthrough generative AI technology. The Ambience AI operating system consists of a holistic
+    suite of applications, designed to alleviate clinician burnout, improve overall system efficiency, and enable high-quality care. By partnering with Ambience,
+    healthcare systems reduce documentation time by an average of 78%, improve coding integrity, and achieve at least a 5X return on investment."""
+    st.write(f'<p style="color:#68696b">{intro_text}</p>', unsafe_allow_html=True)
+    st.write("*Probable folks to connect with*:")
+    st.write("[Brendan Fortuner](https://www.linkedin.com/in/bfortuner/): Head of Engineering, [Nikhil Buduma](https://www.linkedin.com/in/nikhilbuduma/): Co-Founder & Chief Scientist, [Tian Dou](https://www.linkedin.com/in/tian-dou/): Product Design")
+
+    st.image("red_divider_2.jpg")
+
+
+
+
+    st.write("*Name*: [OpenPipe](https://openpipe.ai/)")
+    st.write("*Funding*: $6.7M seed")
+    st.write("*Industry*: Data, Artificial Intelligence, B2B Software")
+
+    intro_text = """
+    Fine-tune models to replace your LLM prompts. It automatically convert expensive LLM prompts into fast, cheap fine-tuned models."""
+    st.write(f'<p style="color:#68696b">{intro_text}</p>', unsafe_allow_html=True)
+    st.write("*Probable folks to connect with*:")
+    st.write("[Kyle Corbitt](https://www.linkedin.com/in/kcorbitt/): Co-Founder, [David Corbitt](https://www.linkedin.com/in/davidcorbitt/): Co-Founder, [Bohdan Kovalevskyi](https://www.linkedin.com/in/bohdan-kovalevskyi/): Full Stack Developer")
+
+    st.image("red_divider_2.jpg")
+
+
+
+    st.write("*Name*: [Cognition](http://www.cognition-labs.com/)")
+    st.write("*Funding*: $21M Series A")
+    st.write("*Industry*: Artificial Intelligence, Cloud Computing, Computer Engineering, B2B Software")
+
+    intro_text = """
+    Makers of Devin, the first AI software engineer. They are an applied AI lab focused on reasoning.
+    They’re building AI teammates with capabilities far beyond today’s existing AI tools. By solving reasoning, they can unlock new possibilities in a wide range of disciplines—code is just the beginning."""
+    st.write(f'<p style="color:#68696b">{intro_text}</p>', unsafe_allow_html=True)
+    st.write("*Probable folks to connect with*:")
+    st.write("[Walden Yan](https://www.linkedin.com/in/waldenyan/): Co-Founder, [Andrew H.](https://www.linkedin.com/in/andrew-he/): Human Software Engineer, [Sara Xiang](https://www.linkedin.com/in/saraxiang/): Human Product Manager")
+
+    st.image("red_divider_2.jpg")
+
+
+
+
+
+
+
+
 
 
 
@@ -379,7 +453,7 @@ with tab2:
 
 
 with tab3:
-    st.image("cover_image_10.jpg")
+    #st.image("cover_image_10.jpg")
     import pip
     import numpy as np
     import pandas as pd
@@ -393,7 +467,7 @@ with tab3:
     #from langchain_experimental.sql import SQLDatabaseChain
 
     import os
-    os.environ['OPENAI_API_KEY'] = "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"
+    os.environ['OPENAI_API_KEY'] = "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"
     os.environ['SERPAPI_API_KEY'] = "181c6aacc8075e235ee567884f58f298dc35033b6de749ab6537f4b7cd1655f2"
     np.random.seed(0)
 
@@ -426,8 +500,9 @@ with tab3:
     ]
 
 
-    system_prompt = st.text_input("Please enter your story", "My name is Sam and I am a..." )
-    company_input = st.text_input("Please enter the name of the company you want to generate a blurb for: ", "Tesla")
+    system_prompt = st.text_input("Please enter your story")
+    company_input = st.text_input("Please enter the URL of the company you want to generate a blurb for: ")
+    sample_output = "Hi X, I hope you're doing great.I'm a product designer with a master's in Design from UC Berkeley. Over the past 6 months, I've been working on building a platform for providing better economic opportunities for small businesses in India, particularly in the crafts sector. At the same time, I've had the opportunity to work as a Product Designer at companies like Ripple and Amadeus, where I gained valuable experience in building automation tools and streamlining workflows.Now, I'm looking to combine these two areas of expertise to create truly impactful products and experiences for small businesses. That's why I'm really interested in the work at Homebase. As a leading provider of workforce management solutions for small businesses, I believe Homebase is uniquely positioned to understand the challenges these companies face and develop tools that can make a real difference. I feel I could learn a lot from your team's insights and experiences. Would you be willing to have a 30-minute information interview with me in the coming weeks? Thank you so much for your time and consideration. Sincerely, Kabeer"
 
 
     from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
@@ -441,7 +516,7 @@ with tab3:
 
     prompt = ChatPromptTemplate.from_messages(
         [
-            ("system", f"You are a Career advisor specializing in tech jobs - here is a profile of a candidate with their introduction: {system_prompt} How does this candidate fit for {company_input}? Please write it in first person, as if the candidate is typing the message and within 200 words. Make it as human and personalized as possible. Sound formal and relate the candidates experiences with certain projects of the company in depth. Be specific and do extensive research on the company, mostly from their website and blog posts about the mentioned company. Write it in the form of a message to the hiring manager Mr. X "),
+            ("system", f"You are a Career advisor specializing in tech jobs. Here is a profile of a candidate with their introduction: {system_prompt}Write how the candidate’s experience and abilities make them a good fit for the company: {company_input}. Please write it in first person, as if the candidate is typing the message. Make it as human and personalized as possible and sound formal. Do deep research into the company’s projects and articles about their work and relate how the candidate's abilities and experiences can contribute to the betterment of the company, do not just stick to the core mission of the company, go beyond that. Be specific and do extensive research on the company by searching the internet, mostly from their website and blog posts about the mentioned company. Make the message within 100 words. Write the message as if the candidate wishes to learn more about the company’s ethos and work in the process building a long lasting connection. Keep the tone and wordings very similar to the user story. Do not add unnecessary adjectives. This is a {sample_output} follow the exact same structure as the sample_output and be as honest and as less robotic as possible. Dont hallucinate."),
             ("user", "{input}"),
             MessagesPlaceholder(variable_name="agent_scratchpad"),
         ]
@@ -477,7 +552,23 @@ with tab3:
 
     user_input = "Craft a story as to how this candidate's profile fit well with the mission of the company mentioned"
 
-    if st.button("Ask chatterbox"):
+    col1, col2, col3 , col4, col5 = st.columns(5)
+
+    with col1:
+        pass
+    with col2:
+        pass
+    with col4:
+        pass
+    with col5:
+        pass
+    with col3 :
+        center_button = st.button('Generate')
+
+        #st.button("Ask chatterbox")
+
+
+    if center_button == True:
 
         p=agent_executor.invoke(
         {

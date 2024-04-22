@@ -1,7 +1,7 @@
 from langchain_community.document_loaders import TextLoader
 
 import os
-
+os.environ['OPENAI_API_KEY'] = "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"
 
 loader = TextLoader("/Users/samriddhoghosh/Desktop/Early/doc.txt")
 documents = loader.load()
@@ -11,7 +11,7 @@ from langchain_openai import OpenAIEmbeddings
 from langchain_text_splitters import CharacterTextSplitter
 
 text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
-texts = text_splitter.split_documents(documents)git 
+texts = text_splitter.split_documents(documents)
 embeddings = OpenAIEmbeddings()
 db = FAISS.from_documents(texts, embeddings)
 
@@ -106,7 +106,7 @@ print(string_2)
 
 #--------------------------Notification code
 
-
+import time
 
 from notifypy import Notify
 
@@ -117,8 +117,9 @@ notification.audio = "/Users/samriddhoghosh/Desktop/Early/beep-07a.wav"
 notification.icon = "/Users/samriddhoghosh/Desktop/Early/LogoNudge.png"
 notification.application_name = "Nudge"
 
-
 notification.send()
+
+time.sleep(3)
 
 notification.title = "Reminder 2"
 notification.message = string_2
