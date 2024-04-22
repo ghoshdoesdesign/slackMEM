@@ -477,8 +477,8 @@ with tab3:
 
     import os
     configure()
-    os.environ['OPENAI_API_KEY'] = os.getenv('OAI')
-    os.environ['SERPAPI_API_KEY'] = os.getenv('SERP')
+    os.environ['OPENAI_API_KEY'] = "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"
+    os.environ['SERPAPI_API_KEY'] = "181c6aacc8075e235ee567884f58f298dc35033b6de749ab6537f4b7cd1655f2"
     
     np.random.seed(0)
 
