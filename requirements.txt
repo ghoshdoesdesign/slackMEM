@@ -1,0 +1,8 @@
+streamlit
+pip
+numpy
+pandas
+langchain
+os
+sklearn
+openai
