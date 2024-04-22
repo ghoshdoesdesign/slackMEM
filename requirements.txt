@@ -1,5 +1,5 @@
 streamlit
-python == 3.9.2
+python == 3.9.0
 langchain
 os
 openai
