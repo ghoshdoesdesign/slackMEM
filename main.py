@@ -2,7 +2,6 @@ import streamlit as st
 # st.set_page_config(page_title="Hustler AI",
 #                    page_icon=":bridge_at_night:",
 #                    layout="wide")
-from dotenv import load_dotenv
 
 
 st.image("big_02.jpg")
@@ -467,6 +466,9 @@ with tab3:
     from langchain.chat_models import ChatOpenAI
     from langchain.utilities import SerpAPIWrapper, SQLDatabase
     #from langchain_experimental.sql import SQLDatabaseChain
+
+    from dotenv import load_dotenv
+
 
     def configure():
         load_dotenv()
